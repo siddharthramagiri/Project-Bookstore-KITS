@@ -510,6 +510,19 @@ html{
     height:60px;
     font-size:large;
 }
+.developers{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1400px;
+}
+.devs .image{
+    border-radius: 50%;
+    width:200px;
+}
+.devs_info{
+    display: grid;
+    margin-left: 40px;
+}
 
 
 /* For Mobile View Adjustment ..... */
@@ -531,10 +544,12 @@ html{
 
     }
     .header .search{
+        width: 90%;
         border-radius:5px;
         border-width:2px;
-        margin-left:0px;
-        margin-right: 0px;
+        margin: 0px;
+        margin-bottom: 10px;
+        margin-top: 5px;
     }
     .menu{
         display:block;
@@ -572,7 +587,7 @@ html{
     }
     .grid{
         height:330px;
-        width:135px;
+        width:180px;
     }
     .grid .image{
         height:130px;
@@ -771,10 +786,10 @@ html{
         font-size:medium;
     }
     .child1{
-        width: 350px;
+        width: 90%;
         justify-content: left;
-        top: 108px;
-        left:20px;
+        top: 100px;
+        left:25px;
     }
     .simage{
         width:25px;
@@ -782,5 +797,55 @@ html{
     }
     .product{
         width:300px;
+    }
+    .developers{
+        width: end;
+        display: block;
+        width: 1400px;
+    }
+    .devs{
+        display:block;
+        padding: 0px;
+        width:100%;
+        font-size: small;
+        margin: 5px;
+        margin-left:-10px;
+    }
+    .developers .devs .image{
+        width:50px;
+    }
+    .developers{
+        display: grid;
+        width: 100%;
+    }
+    .devs .image{
+        border-radius: 50%;
+        width:200px;
+    }
+    .devs_info{
+        display: grid;
+        margin-left: 40px;
+        width: 100%;
+    }
+    .mobile_navs{
+        width: 100%;
+        background-color: rgb(54, 152, 111);
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+    .header div .btns{
+        margin: 5px;
+        border:solid transparent;
+        width:50px;
+        height:50px;
+        background-color: transparent;
+        color:white;
+    }
+    .header div .btns:hover{
+        cursor: pointer;
+        border: 1px solid white;
+        background-color: white;
+        color: rgb(54, 152, 111);
     }
 }
