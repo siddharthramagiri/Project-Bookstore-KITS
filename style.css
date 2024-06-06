@@ -854,4 +854,10 @@ html{
         background-color: white;
         color: rgb(54, 152, 111);
     }
+    .mobile_navs .btns .countwish{
+        display: none;
+    }
+    .mobile_navs .btns .countbag{
+        display: none;
+    }
 }
