@@ -523,6 +523,10 @@ html{
     display: grid;
     margin-left: 40px;
 }
+.in_prod_btns{
+    width:670px;
+    height:70px;
+}
 
 
 /* For Mobile View Adjustment ..... */
@@ -689,6 +693,8 @@ html{
     }
     .in_prod_btns{
         display: grid;
+        width:280px;
+        height:70px;
     }
     .wish_prod{
         font-size: x-small;
