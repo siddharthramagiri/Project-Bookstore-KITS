@@ -527,7 +527,26 @@ html{
     width:670px;
     height:70px;
 }
-
+.statusgrid{
+    width:1400px;
+    height:120px;
+    margin: 20px;
+    display:flex;
+    flex-wrap: wrap;
+    border-color: rgba(173, 173, 173, 0.584);
+    background-color: transparent;
+    padding: 10px;
+    font-size: larger;
+}
+.status_info{
+    padding:10px;
+    width:520px;
+}
+.status_measure{
+    width:60px;
+    height:58px;
+    font-size:large;
+}
 
 /* For Mobile View Adjustment ..... */
 
@@ -571,6 +590,7 @@ html{
         right:-240px;
         text-align: left;
         z-index: 2;
+        display: none;
     }
     .navs .navbt{
         width: 200px;
@@ -613,7 +633,7 @@ html{
         margin-bottom:20px;
     }
     .tprice{
-        width: 100%;
+        width: end;
         margin: 0px;
         margin-left: 20px;
         margin-top: 20px;
@@ -638,11 +658,11 @@ html{
     .cartmsg1{
         margin-top: 20px;
         height:end;
-        width:100%;
+        width:300px;
     }
     .cartmsg2{
         height:45px;
-        width:100%;
+        width:300px;
     }
     .add_to_cart .noitems{
         text-align: left;
@@ -795,7 +815,7 @@ html{
         width: 90%;
         justify-content: left;
         top: 100px;
-        left:25px;
+        left:5%;
     }
     .simage{
         width:25px;
@@ -807,31 +827,31 @@ html{
     .developers{
         width: end;
         display: block;
-        width: 1400px;
+        width: end;
     }
     .devs{
-        display:block;
+        display:flex;
         padding: 0px;
-        width:100%;
+        width: 330px;
         font-size: small;
         margin: 5px;
-        margin-left:-10px;
-    }
-    .developers .devs .image{
-        width:50px;
+        margin-left:-15px;
     }
     .developers{
         display: grid;
         width: 100%;
     }
     .devs .image{
-        border-radius: 50%;
-        width:200px;
+        width:95px;
+        margin: 10px;
     }
     .devs_info{
         display: grid;
-        margin-left: 40px;
-        width: 100%;
+        width: end;
+        margin: 10px;
+    }
+    .devs_info h1 a{
+        width: end;
     }
     .mobile_navs{
         width: 100%;
@@ -859,5 +879,30 @@ html{
     }
     .mobile_navs .btns .countbag{
         display: none;
+    }
+    .statusgrid{
+        width:100%;
+        height:100%;
+        margin: 0px;
+        margin-top: 10px;
+        display:grid;
+        flex-wrap: wrap;
+        padding: 0px;
+        font-size: small;
+    }
+    .status_info{
+        width: 100%;
+        padding: 0px;
+    }
+    .status_measure{
+        width:40px;
+        height:40px;
+        margin: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size:xx-small;
+    }
+    .status_text{
+        font-size: 10px;
     }
 }
