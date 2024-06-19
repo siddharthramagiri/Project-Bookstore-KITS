@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOOK STORE</title>
+     
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="">
+    <div class="parent" id="parent">
+        <div class="child1 hide" id="child1">
+            <div class="product" onclick="showproduct(0)">
+                <img class="simage" src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4842-2499-1">
+                <p class="bookname">Web Development <br> Author: Jorg Krause</p>
+            </div>
+            <div class="product" onclick="showproduct(1)">
+                <img class="simage" src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-0225-7">
+                <p class="bookname">Text Book CSS<br> Author: Andy Clarke,Simson Collision</p>
+            </div>
+
+            <div class="product" onclick="showproduct(2)">
+                <img class="simage" src="https://m.media-amazon.com/images/I/5107+nK-zDL.jpg">
+                <p class="bookname">Java Script Modern WP<br> Author: Alok Ranjan,Abhilasha sinha</p>
+            </div>
+            <div class="product" onclick="showproduct(3)">
+                <img class="simage" src="https://jupiterbooks.in/wp-content/uploads/2022/04/python-001.jpg">
+                <p class="bookname">TextBook Python<br> Author: TextBook of Python 2nd year</p>
+            </div>
+            <div class="product" onclick="showproduct(4)">
+                <img class="simage" src="https://m.media-amazon.com/images/I/618YQosPQTL._AC_UF1000,1000_QL80_.jpg">
+                <p class="bookname">JAVA TextBook 7th Edition<br> Author: Herbert Schildt</p>
+            </div>
+            <div class="product" onclick="showproduct(5)">
+                <img class="simage" src="https://m.media-amazon.com/images/I/91iM1mMOTOL._AC_UF1000,1000_QL80_.jpg">
+                <p class="bookname">Artificial Intelligence <br> Author: Prakashan Goyal Brothers</p>
+            </div>
+            <div class="product" onclick="showproduct(6)">
+                <img class="simage" src="https://m.media-amazon.com/images/I/41FZh18ysyL.jpg">
+                <p class="bookname">Machine Learning TextBook<br> Author: Andrew Wolf</p>
+            </div>
+            <div class="product" onclick="showproduct(7)">
+                <img class="simage" src="https://m.media-amazon.com/images/I/71rUP3ZW4NL._AC_UF1000,1000_QL80_.jpg">
+                <p class="bookname">C++ Fourth Edition <br> Author: Herbert Schildt</p>
+            </div>
+            <div class="product" onclick="showproduct(8)">
+                <img class="simage" src="https://m.media-amazon.com/images/I/510XL4CQ24L._SY466_.jpg">
+                <p class="bookname">Database Management System (University of Mumbai)<br> Author: Safa Hamdare & A.K. Sen Bhavesh Pandya</p>
+            </div>
+            <div class="product" onclick="showproduct(9)">
+                <img class="simage" src="https://m.media-amazon.com/images/I/71SKAdbF2fL._SY466_.jpg">
+                <p class="bookname">Beginning SQL Queries: From Novice to Professional<br> Author: Clare Churcher </p>
+            </div>
+            <div class="product" onclick="showproduct(10)">
+                <img class="simage" src="https://m.media-amazon.com/images/I/81eF-RxjuaL._SY466_.jpg">
+                <p class="bookname">Operating System Principles <br> Author: Silberschatz, Galvin, Gagne</p>
+            </div>
+        </div>
+        <div class="child2">
+            <div style="justify-content: center;">
+                <div class=" header" id="start">
+                    <h2 style="margin-top: 20px;font-family: 'Afacad';cursor: pointer;" onclick="gotohome()">BOOK STORE</h2>
+                    <input class="search" id="search" type="search" placeholder="Search Here" onkeyup="searchbooks()" autocomplete="off">
+                    <div class="mobile_navs">    
+                        <button class="btns wish">
+                            <span class="material-symbols-outlined">
+                                favorite
+                            </span><span class="countwish">0</span>
+                        </button>
+                        </button>  
+                        <button class="btns cart">
+                            <span class="material-symbols-outlined">
+                                shopping_bag
+                            </span><span class="countbag">0</span>
+                        </button>
+                        <button class="btns log">
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                        </button>
+                        </button>
+                        <button class="btns theme">
+                            <span class="material-symbols-outlined">
+                                dark_mode
+                            </span>
+                        </button>
+                        <button class="btns">
+                            <span class="menu material-symbols-outlined" onclick="showmenu()">
+                                menu
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="navs ">
+                    <button class="navbt" style="width:100px" onclick="closemenu()">
+                        <span class="closemenu material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                    <a href="#start">
+                        <button class="home navbt" onclick="gotohome()">
+                            Home
+                        </button>
+                    </a>
+                    <button class="contact navbt">Contact</button>
+                    <button class="about navbt">About Us</button>
+                    <a href="#prods">
+                        <button class="shop navbt" onclick="gotohome()">
+                            Shop
+                        </button>
+                    </a>
+                    <button class="pages navbt">Pages</button>
+                    <button class="reviews navbt">Reviews</button>
+                </div>
+            </div>
+            <!-- MAIN BODY STARTS HERE -->
+            <div class="main " style="margin-bottom: 80px;">
+                <div class="slide">
+                    <div class="offer">
+                        <h1>Upto 69% Off</h1>
+                        <h4>There are many variations of Computer Science Books available,
+                            <br> Order before Offer Ends, Discount on Web Technologies.</h4>
+                        <a href="#prods">    
+                            <button class="shopnow"> Shop Now</button>
+                        </a>
+                    </div>
+                    <div class="mainimage" style="margin:25px;margin-left: 300px;">
+                        <img src="https://cdni.iconscout.com/illustration/premium/thumb/book-store-4375413-3637503.png" width="300px">
+                    </div>
+                </div>
+                <div style=" margin-bottom:30px;height:70px;justify-content: center;display: flex;flex-wrap: wrap;" id="prods">
+                    <button style="
+                        margin-top:30px;padding-right:40px;padding-left:40px;
+                        padding-top: 10px;padding-bottom: 10px;font-size:larger;
+                        background-color: transparent;border-width: 1px;border-style: groove;
+                        color:rgb(54, 152, 111, 0.66);border-color: rgb(54, 152, 111);
+                        "> 
+                        <b>Featured Books</b> 
+                    </button>
+                </div>
+                <div id="container">
+                    <div class="container " >
+                        <div class="eachitem" >
+                            <div class="grid">
+                                <div class="open" name="0">
+                                    <img name="0" class="image" src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4842-2499-1" height="200px" >
+                                    <p>Web Development <br> Author: Jorg Krause Ratings : 3.9 </p>
+                                    <h2>&#8377 1099.00</h2>
+                                </div>
+                                <button class="addcart" name="0">Add to cart</button>
+                                <button class="addwish" name="0">wishlist</button>
+                            </div>
+                        </div>
+                        
+                        <div class="eachitem" >
+                            <div class="grid">
+                                <div class="open" name="1">
+                                    <img name="1" class="image" src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-0225-7" height="200px" >
+                                    <p>Text Book CSS<br> Author: Andy Clarke,Simson Collision</p>
+                                    <h2>&#8377 290.00</h2>
+                                </div>
+                                <button class="addcart" name="1">Add to cart</button>
+                                <button class="addwish" name="1">wishlist</button>
+                            </div>
+                        </div>
+                        <div class="eachitem" >
+                            <div class="grid">
+                                <div class="open" name="2">
+                                    <img name="2" class="image" src="https://m.media-amazon.com/images/I/5107+nK-zDL.jpg" height="200px" >
+                                    <p>Java Script Modern WP<br> Author: Alok Ranjan,Abhilasha sinha</p>
+                                    <h2>&#8377 999.00</h2>
+                                </div>
+                                <button class="addcart" name="2">Add to cart</button>
+                                <button class="addwish" name="2">wishlist</button>
+                            </div>
+                        </div>
+                        <div class="eachitem" >
+                            <div class="grid">
+                                <div class="open" name="3">
+                                    <img name="3" class="image" src="https://jupiterbooks.in/wp-content/uploads/2022/04/python-001.jpg" height="200px" >
+                                    <p>TextBook Python<br> Author: TextBook of Python 2nd year</p>
+                                    <h2>&#8377 498.00</h2>
+                                </div>
+                                <button class="addcart" name="3">Add to cart</button>
+                                <button class="addwish" name="3">wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" >
+                        <div class="eachitem" >
+                            <div class="grid">
+                                <div class="open" name="4">
+                                    <img name="4" class="image" src="https://m.media-amazon.com/images/I/618YQosPQTL._AC_UF1000,1000_QL80_.jpg" height="200px" >
+                                    <p>JAVA TextBook 7th Edition<br> Author: Herbert Schildt</p>
+                                    <h2>&#8377 2427.00</h2>
+                                </div>
+                                <button class="addcart" name="4">Add to cart</button>
+                                <button class="addwish" name="4">wishlist</button>
+                            </div>
+                        </div>
+                        <div class="eachitem" >
+                            <div class="grid">
+                                <div class="open" name="5">
+                                    <img name="5" class="image" src="https://m.media-amazon.com/images/I/91iM1mMOTOL._AC_UF1000,1000_QL80_.jpg" height="200px" >
+                                    <p>Artificial Intelligence <br> Author: Prakashan Goyal Brothers</p>
+                                    <h2>&#8377 1089.00</h2>
+                                </div>
+                                <button class="addcart" name="5">Add to cart</button>
+                                <button class="addwish" name="5">wishlist</button>
+                            </div>
+                        </div>
+                        <div class="eachitem" >
+                            <div class="grid">
+                                <div class="open" name="6">
+                                    <img name="6" class="image" src="https://m.media-amazon.com/images/I/41FZh18ysyL.jpg" height="200px" >
+                                    <p>Machine Learning TextBook<br> Author: Andrew Wolf</p>
+                                    <h2>&#8377 1899.00</h2>
+                                </div>
+                                <button class="addcart" name="6">Add to cart</button>
+                                <button class="addwish" name="6">wishlist</button>
+                            </div>
+                        </div>
+                        <div class="eachitem" >
+                            <div class="grid">
+                                <div class="open" name="7">
+                                    <img name="7" class="image" src="https://m.media-amazon.com/images/I/71rUP3ZW4NL._AC_UF1000,1000_QL80_.jpg" height="200px" >
+                                    <p>C++ Fourth Edition <br> Author: Herbert Schildt </p>
+                                    <h2>&#8377 2177.00</h2>
+                                </div>
+                                <button class="addcart" name="7">Add to cart</button>
+                                <button class="addwish" name="7">wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondcontainer">
+                        <div class="eachitem">
+                            <div class="grid book1" >
+                                <div class="open" name="8">
+                                    <img name="8" class="image" src="https://m.media-amazon.com/images/I/510XL4CQ24L._SY466_.jpg" height="200px" >
+                                    <p>Database Management System (University of Mumbai)<br> Author: Safa Hamdare & A.K. Sen Bhavesh Pandya</p>
+                                    <h2>&#8377 2028.00</h2>
+                                </div>
+                                <button class="addcart" name="8">Add to cart</button>
+                                <button class="addwish" name="8">wishlist</button>
+                            </div>
+                        </div>
+                        <div class="eachitem">
+                            <div class="grid book1" >
+                                <div class="open" name="9">
+                                    <img name="9" class="image" src="https://m.media-amazon.com/images/I/71SKAdbF2fL._SY466_.jpg" height="200px" >
+                                    <p>Beginning SQL Queries: From Novice to Professional<br> Author: Clare Churcher </p>
+                                    <h2>&#8377 3628.00</h2>
+                                </div>
+                                <button class="addcart" name="9">Add to cart</button>
+                                <button class="addwish" name="9">wishlist</button>
+                            </div>
+                        </div>
+                        <div class="eachitem">
+                            <div class="grid book1" >
+                                <div class="open" name="10">
+                                    <img name="10" class="image" src="https://m.media-amazon.com/images/I/81eF-RxjuaL._SY466_.jpg" height="200px" >
+                                    <p>Operating System Principles <br> Author: Silberschatz, Galvin, Gagne</p>
+                                    <h2>&#8377 2628.00</h2>
+                                </div>
+                                <button class="addcart" name="10">Add to cart</button>
+                                <button class="addwish" name="10">wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                            
+                </div>
+            </div>
+
+            </div>
+            <!-- MAIN BODY ENDS HERE -->
+
+            <!-- CART BODY STARTS HERE -->
+            <div class="cartbody hide" >
+                <div class="seperate">
+                    <div class="pannel">
+                        <div class="tprice">
+                            <h1> Summary </h1>
+                            <label>Enter Promo Code: </label><br>
+                            <input class="promo" type="text" maxlength="4" style="
+                                height:40px;width:120px;vertical-align: center;border-style:solid;
+                                border-radius:5px;border-width:2px;border-color: rgba(38, 107, 78, 0.524);
+                                background-color: rgba(54, 152, 111, 0.053);font-size:x-large;
+                            ">
+                            <br><br><h3  value="0">SubTotal Price &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;:&ensp;&#8377<span class="subprice">0.00 </span> </h3>
+                            <br><h3 >Shipping & Handling &ensp;&ensp;&ensp;:&ensp;&#8377<span class="ship">40.00</span> </h3>
+                            <br><h3>Estimated Tax &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&nbsp;:&ensp;&#8377<span class="taxes">10.00</span> </h3>
+                            <br><hr><br>
+                            <h3 >Total &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&nbsp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;:&ensp;&#8377<span class="total">0.00</span> </h3><br>
+                            <hr>
+                            <button class="book" style="height:50px;width:300px;" >BOOK NOW</button>
+                        </div> 
+                    </div>
+
+                    <!-- items Add to the Cart Here -->
+                    <div class="add_to_cart" >
+                        <div class="cartmsg1">
+                            <p style="color:rgb(54, 152, 111)   ">Free Shipping for members</p>
+                            <p>Become Our Book Store Member &nbsp;<a href="">Join us</a>&nbsp;or&nbsp;<a href="">Sign-in</a> </p>
+                        </div>
+                        <div class="cartmsg2">
+                            <p>Save Up to 40%</p>
+                            <p><a href="#start" style="color:black">Shop All our New Books</a></p>
+                        </div>
+                        <br><h1>Bag of items
+                            ( <span class="countbag1">0</span> )
+                        </h1><br>
+                        
+
+                        <div class="noitems " style>
+                            <br><br>
+                            <h1>
+                                Your Bag is Empty
+                            </h1><br>
+                            <span class="material-symbols-outlined" style="size: 50px;">
+                                sentiment_dissatisfied
+                            </span>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+    <!--   ----WishList Body----   -->
+            <div class="wishbody hide" style="height:1000px;">
+                <div class="wishlabel" >
+                    <br><h1>My Wishlist 
+                        ( <span class="countwish1">0</span> )
+                    </h1><br>
+                    <span class="material-symbols-outlined" style="size: 50px;font-variation-settings:'FILL' 1">
+                        favorite
+                    </span>
+                </div>
+                <hr>
+                
+            </div>
+
+
+            <div class="productbody hide" >
+                
+            </div>
+
+        <!-- LOGIN FORM -->
+            <div class="user hide">
+                <div class="logform hide" style="background-color: rgb(54, 152, 111); ">
+                    <br>
+                    <div class="box" style="display: flex;box-shadow: 0px 0px 50px 10px rgba(60, 60, 60, 0.400) ;">  
+                        <div class="left" style="background-color: white;padding: 20px;width: 700px;height:525px;">
+                            <div class="overlay">
+                                <h1 style="font-size:75px;">BOOK STORE
+                                    <span class="material-symbols-outlined">
+                                        auto_stories
+                                    </span>
+                                </h1>
+                                <p style="font-size: 50px;">"Never Stop Learning New Things"</p><br><br><br><br>
+                                <p>login with social media</p>
+                                <div style="text-align: center;">
+                                    <button class="loginbtns" style="background-color: rgb(0, 59, 161);color: white;width:250px;border-radius: 10px; border:1px solid rgb(0, 59, 161)"> 
+                                        <i class="fa fa-facebook"></i>&nbsp;&nbsp;
+                                        Login with Facebook
+                                    </button>
+                                    
+                                    <button class="loginbtns" style="color: rgb(43, 149, 184);background-color: transparent;width:250px;border-radius: 10px;border:1px solid rgb(43, 149, 184);"> 
+                                        <i class="fa fa-twitter"></i>&nbsp;&nbsp;
+                                        Login with Twitter
+                                    </button>
+                                    <br><br>
+                                    <button class="loginbtns" style="color: white;background-color: rgb(174, 0, 0);width:250px;border-radius: 10px;border:1px solid rgb(174, 0, 0);"> 
+                                        <i class="fa fa-google"></i>&nbsp;&nbsp;
+                                        Continue with Google
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right" >
+                            <h1 style="font-size: 65px;color: rgba(0, 0, 0, 0.442);">Login</h1>
+                            <p style="color: rgba(0, 0, 0, 0.442);font-size: medium;">Don't have an account? <a href="#">Creat Your Account</a> it takes less than a minute</p>
+                        <!--  ..........FORM..........  -->
+                            <form class="inputs">
+                                <label for="username"></label>
+                                <input id="username" class="loginbtns" name="username" type="text" placeholder="User Name" required>
+                                <br><br>
+                                <label for="email"></label>
+                                <input id="email" class="loginbtns" name="email" type="email" placeholder="Email Address" required>
+                                <br>
+                                <label for="password"></label>
+                                <input id="password" class="loginbtns" name="password" type="password" placeholder="Password" maxlength="6" required>
+                                <br><br>
+                                <label>
+                                    <input type="checkbox" name="item" checked/>
+                                    <span class="text-checkbox" style="color:black">Remember me</span>
+                                </label>
+                                <p style="color:black">forget password?</p>
+                                <br>
+                                <input type="submit" style="background-color: white;width:120px;height: 50px;border:none" name="submit" >
+                            </form>
+                        </div>
+                    </div>  
+                </div>
+            <!-- ...................................... -->
+                <div class="person hide" >
+                    <div class="person_details" >
+                        <h1 class="username"> Welcome<br>     </h1>
+                        <div style="display:flex">
+                            <div>
+                                <label for="address">Change Your Address: </label><br>
+                                <input id="address" value="Kakatiya Institute of technology & Science, YerragattuGutta, bhemavaram">
+                            </div>&nbsp;&nbsp;&nbsp;
+                            <div>
+                                <label>Change Email: </label><br>
+                                <input class="emailvalue" style="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shippment" >
+                        <h1>Order Shippment Status: </h1>
+                        <!-- Scripting code >
+                        <div class="statusgrid " 
+                            /##Q$%^&*())*(*^&%#@$#%^(&)**()-*//-*+)
+                        </div-->
+                    </div>
+                </div>
+            </div>
+            <div class="aboutus hide" style="margin: 30px;">
+                <div>
+                    <h1>Developers</h1><br>
+                    <div class="developers" >
+                        <div class="devs">
+                            <img class="image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" >
+                            <div class="devs_info" >
+                                <h2>Siddu Ramagiri</h2>
+                                <a href="https://instagram.com/siddharthramagiri/" target="_blank"><i class="fa fa-instagram" style="color:rgb(184, 78, 43)"></i>  siddharthramagiri</a>
+                                <a href="https://in.linkedin.com/in/siddu-ramagiri-053b7b253" target="_blank"><i class="fa fa-linkedin" style="color:rgb(20, 107, 136)"></i>  LinkedIn</a>
+                                <a href="mailto:sidduramagiri3@gmail.com" target="_blank"><i class="fa fa-google" style="color:black"></i>  sidduramagiri3@gmail.com</a>
+                                <a href="https://twitter.com/Siddhar19437018" target="_blank"> <i class="fa fa-twitter" style="color:rgb(43, 149, 184)"></i> Siddhar19437018</a>
+                            </div>
+                        </div>
+                        <div class="devs">
+                            <img class="image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png">
+                            <div class="devs_info">
+                                <h2>Pulumati Thanishk</h2>
+                                <a href="https://instagram.com/siddharthramagiri/" target="_blank"><i class="fa fa-instagram" style="color:rgb(184, 78, 43)"></i>  pulumati_thanishk</a>
+                                <a href="https://www.linkedin.com/in/pulumati-thanishk-3360742b0/" target="_blank"><i class="fa fa-linkedin" style="color:rgb(20, 107, 136)"></i>  LinkedIn</a>
+                                <a href="mailto:1730329.thanishk@gmail.com" target="_blank"><i class="fa fa-google" style="color:black"></i>  1730329.thanishk@gmail.com</a>
+                                <a href="https://twitter.com/ThanishkSpeaks" target="_blank"> <i class="fa fa-twitter" style="color:rgb(43, 149, 184)"></i> ThanishkSpeaks</a>
+                            </div>
+                        </div>
+                        <div class="devs">
+                            <img class="image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" >
+                            <div class="devs_info">
+                                <h2>M. Sai Teja</h2>
+                                <a href="https://www.instagram.com/saiteja6434/" target="_blank"><i class="fa fa-instagram" style="color:rgb(184, 78, 43)"></i>  saiteja6434</a>
+                                <a href="https://www.linkedin.com/in/mamidala-sai-teja-97a451280/" target="_blank"><i class="fa fa-linkedin" style="color:rgb(20, 107, 136)"></i>  LinkedIn</a>
+                                <a href="mailto:saiteja8309@gmail.com" target="_blank"><i class="fa fa-google" style="color:black"></i>  saiteja8309@gmail.com</a>
+                                <!-- <a href="https://twitter.com/Siddhar19437018" target="_blank"> <i class="fa fa-twitter" style="color:rgb(43, 149, 184)"></i> Siddhar19437018</a> -->
+                            </div>
+                        </div>
+                        <div class="devs">
+                            <img class="image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" >
+                            <div class="devs_info">
+                                <h2>Y. Vinith Reddy</h2>
+                                <a href="https://www.instagram.com/vinithreddy.80/" target="_blank"><i class="fa fa-instagram" style="color:rgb(184, 78, 43)"></i>  vinithreddy.80</a>
+                                <a href="https://in.linkedin.com/in/siddu-ramagiri-053b7b253" target="_blank"><i class="fa fa-linkedin" style="color:rgb(20, 107, 136)"></i>  LinkedIn</a>
+                                <a href="mailto:yekkativinith1234@gmail.com" target="_blank"><i class="fa fa-google" style="color:black"></i>  yekkativinith1234@gmail.com</a>
+                                <a href="https://twitter.com/imVReddy279" target="_blank"> <i class="fa fa-twitter" style="color:rgb(43, 149, 184)"></i> imVReddy279</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- MEMBERS BODY -->
+        <div class="members" >
+            <div>
+                <div>
+                    <div>
+                        <h2 style="color:rgb(54, 152, 111);">TEAM MEMBERS</h2>
+                    </div>
+                    <div>
+                        <p>R.Siddu</p>
+                        <!-- <a href="sidduramagiri3@gmail.com" style="color:black">sidduramagiri3@gmail.com</a> -->
+                    </div>
+                    <div>
+                        <p>P.Thanishk</p>
+                        <!-- <a href="sidduramagiri3@gmail.com" style="color:black">sidduramagiri3@gmail.com</a> -->
+                    </div>
+                    <div>
+                        <p>M.Saiteja</p>
+                        <!-- <a href="sidduramagiri3@gmail.com" style="color:black">sidduramagiri3@gmail.com</a> -->
+                    </div>
+                    <div>
+                        <p>Y.Vinith Reddy</p>
+                        <!-- <a href="sidduramagiri3@gmail.com" style="color:black">sidduramagiri3@gmail.com</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- -----JAVA SCRIPT CODE---- -->
+        <script src="script.js"></script>
+</body>
+</html>
